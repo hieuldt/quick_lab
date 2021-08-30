@@ -1,5 +1,0 @@
-ingress:
-  enabled: true
-  ingressClassName: nginx
-  hostname: nonprod.pod7.huyy
-  hosts: [banana.nonprod.pod7.huyy]
