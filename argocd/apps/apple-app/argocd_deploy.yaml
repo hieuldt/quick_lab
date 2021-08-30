@@ -7,7 +7,7 @@ spec:
   destination:
     namespace: default
     server: https://kubernetes.default.svc
-  project: default
+  project: pod7-training
   source:
     path: argocd/apps/apple-app
     repoURL: https://github.com/hieuldt/quick_lab.git
