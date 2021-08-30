@@ -1,0 +1,19 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: apple-ingress
+  annotations:
+    kubernetes.io/ingress.class: "nginx" # use the one that corresponds to your ingress controller.
+spec:
+  tls:
+  - hosts:
+    - apple.nonprod.pod7.huyy
+    secretName: root-secret
+  rules:
+  - host: apple.nonprod.pod7.huyy
+    http:
+      paths:
+        - path: /
+          backend:
+            serviceName: apple-service
+            servicePort: 5678
