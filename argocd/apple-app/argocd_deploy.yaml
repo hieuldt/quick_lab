@@ -1,19 +1,20 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: apple-app
+  name: apple
   namespace: argocd
 spec:
-  destination:
-    namespace: default
-    server: https://kubernetes.default.svc
-  project: pod7-training
+  project: default
   source:
-    path: argocd/apps/apple-app
-    repoURL: https://github.com/hieuldt/quick_lab.git
-    targetRevision: main
+    repoURL: 'https://raw.githubusercontent.com/hieuldt/quick_lab/main/charts'
+    targetRevision: 0.1.0
+    helm:
+      valueFiles:
+        - values.yaml
+    chart: http-echo
+  destination:
+    server: 'https://kubernetes.default.svc'
+    namespace: default
   syncPolicy:
     automated:
-      allowEmpty: true
-      prune: true
       selfHeal: true
