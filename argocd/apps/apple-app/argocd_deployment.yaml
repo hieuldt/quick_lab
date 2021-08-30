@@ -9,7 +9,7 @@ spec:
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: bitnami/nginx-ingress-controller
+    path: argocd/apps/apple-app
     repoURL: https://github.com/hieuldt/quick_lab.git
   syncPolicy:
     automated:
