@@ -9,7 +9,7 @@ spec:
     server: https://kubernetes.default.svc
   project: pod7-training
   source:
-    path: nginx-ingress
+    path: argocd/nginx-ingress
     repoURL: https://github.com/hieuldt/quick_lab.git
   syncPolicy:
     automated:
