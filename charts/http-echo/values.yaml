@@ -1,2 +1,3 @@
-dnsDomain: ""
-secretName: ""
+dnsDomain: example.com
+secretName: example-tls
+replicasCount: 2

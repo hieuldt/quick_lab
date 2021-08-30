@@ -7,11 +7,11 @@ spec:
   project: default
   source:
     repoURL: 'https://raw.githubusercontent.com/hieuldt/quick_lab/main/charts'
+    chart: http-echo
     targetRevision: 0.1.0
     helm:
       valueFiles:
         - values.yaml
-    chart: http-echo
   destination:
     server: 'https://kubernetes.default.svc'
     namespace: default
