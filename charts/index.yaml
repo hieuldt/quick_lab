@@ -3,12 +3,12 @@ entries:
   react-app:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2021-08-30T18:18:39.950466+07:00"
+    created: "2021-08-30T18:42:49.263264+07:00"
     description: A Helm chart for Kubernetes
-    digest: f7b0adc9031b6b57000c32d191d8336a642dc3cbba4ae9329f8e99a6fbe93ffc
+    digest: 174fcd58911c19d7a7006f3bc8025c3e1c73a2e3156c989b36cf052d79445f49
     name: react-app
     type: application
     urls:
     - react-app-0.1.0.tgz
     version: 0.1.0
-generated: "2021-08-30T18:18:39.949058+07:00"
+generated: "2021-08-30T18:42:49.262275+07:00"
