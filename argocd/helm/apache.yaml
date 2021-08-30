@@ -7,16 +7,28 @@ spec:
   project: pod7-training
   source:
     repoURL: 'https://charts.bitnami.com/bitnami'
+    chart: apache
     targetRevision: 8.6.3
     helm:
       valueFiles:
         - values.yaml
       parameters:
-        - name: service.nodePorts.https
-          value: '31002'
-        - name: service.type
-          value: NodePort
-    chart: apache
+      - name: service.type
+        value: LoadBalancer
+      - name: service.port
+        value: 80
+      - name: service.httpsPort
+        value: 443
+      - name: ingress.enabled
+        value: TRUE
+      - name: ingress.ingressClassName
+        value: nginx
+      - name: ingress.hostname
+        value: nonprod.pod7.huyy
+      - name: ingress.path
+        value: /
+      - name: ingress.hosts
+        value: banana.nonprod.pod7.huyy
   destination:
     server: 'https://kubernetes.default.svc'
     namespace: default
