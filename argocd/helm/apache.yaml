@@ -13,7 +13,7 @@ spec:
         - values.yaml
       parameters:
         - name: service.nodePorts.https
-          value: '31001'
+          value: '31002'
         - name: service.type
           value: NodePort
     chart: apache
