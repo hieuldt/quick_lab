@@ -11,6 +11,7 @@ spec:
   source:
     path: argocd/nginx-ingress
     repoURL: https://github.com/hieuldt/quick_lab.git
+    targetRevision: HEAD
   syncPolicy:
     automated:
       allowEmpty: true

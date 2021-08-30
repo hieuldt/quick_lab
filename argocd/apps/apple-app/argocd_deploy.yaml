@@ -11,6 +11,7 @@ spec:
   source:
     path: argocd/apps/apple-app
     repoURL: https://github.com/hieuldt/quick_lab.git
+    targetRevision: HEAD
   syncPolicy:
     automated:
       allowEmpty: true
