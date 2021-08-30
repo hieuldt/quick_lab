@@ -1,36 +1,36 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: apple-app
+  name: {{ .Release.Name }}-app
   labels:
-    app: apple
+    app: {{ .Release.Name }}
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: apple
+      app: {{ .Release.Name }}
   template:
     metadata:
       labels:
-        app: apple
+        app: {{ .Release.Name }}
     spec:
       containers:
-      - name: apple-app
+      - name: {{ .Release.Name }}-app
         image: hashicorp/http-echo
         args:
-          - "-text=apple"
+          - "-text={{ .Release.Name }}"
 ---
 
 kind: Service
 apiVersion: v1
 metadata:
-  name: apple-service
+  name: {{ .Release.Name }}-service
   # annotations:
-    # external-dns.alpha.kubernetes.io/hostname: apple.nonprod.pod7.tf
+    # external-dns.alpha.kubernetes.io/hostname: {{ .Release.Name }}.nonprod.pod7.tf
 spec:
   # type: LoadBalancer
   selector:
-    app: apple
+    app: {{ .Release.Name }}
   ports:
     - port: 5678 # Default port for image	
 # ---
@@ -38,12 +38,12 @@ spec:
 # kind: Pod
 # apiVersion: v1
 # metadata:
-#   name: apple-app
+#   name: {{ .Release.Name }}-app
 #   labels:
-#     app: apple
+#     app: {{ .Release.Name }}
 # spec:
 #   containers:
-#     - name: apple-app
+#     - name: {{ .Release.Name }}-app
 #       image: hashicorp/http-echo
 #       args:
-#         - "-text=apple"
+#         - "-text={{ .Release.Name }}"

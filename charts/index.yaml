@@ -1,9 +1,20 @@
 apiVersion: v1
 entries:
+  http-echo:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2021-08-30T19:18:02.658494+07:00"
+    description: A Helm chart for Kubernetes
+    digest: d730771aece9651d1b6fcc63d472c02ad25799ba0f5eb474f382ed15dcbb6c76
+    name: http-echo
+    type: application
+    urls:
+    - http-echo-0.1.0.tgz
+    version: 0.1.0
   react-app:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2021-08-30T18:42:49.263264+07:00"
+    created: "2021-08-30T19:18:02.66017+07:00"
     description: A Helm chart for Kubernetes
     digest: 174fcd58911c19d7a7006f3bc8025c3e1c73a2e3156c989b36cf052d79445f49
     name: react-app
@@ -11,4 +22,4 @@ entries:
     urls:
     - react-app-0.1.0.tgz
     version: 0.1.0
-generated: "2021-08-30T18:42:49.262275+07:00"
+generated: "2021-08-30T19:18:02.657138+07:00"
