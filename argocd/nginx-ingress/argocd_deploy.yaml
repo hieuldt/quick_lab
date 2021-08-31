@@ -1,0 +1,19 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: nginx-ingress
+  namespace: argocd
+spec:
+  destination:
+    namespace: 
+    server: https://kubernetes.default.svc
+  project: pod7-training
+  source:
+    path: argocd/nginx-ingress
+    repoURL: https://github.com/hieuldt/quick_lab.git
+    targetRevision: main
+  syncPolicy:
+    automated:
+      allowEmpty: true
+      prune: true
+      selfHeal: true

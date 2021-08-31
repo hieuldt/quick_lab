@@ -1,0 +1,49 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ .Release.Name }}-app
+  labels:
+    app: {{ .Release.Name }}
+spec:
+  replicas: {{ .Values.replicasCount }}
+  selector:
+    matchLabels:
+      app: {{ .Release.Name }}
+  template:
+    metadata:
+      labels:
+        app: {{ .Release.Name }}
+    spec:
+      containers:
+      - name: {{ .Release.Name }}-app
+        image: hashicorp/http-echo
+        args:
+          - "-text={{ .Release.Name }}"
+---
+
+kind: Service
+apiVersion: v1
+metadata:
+  name: {{ .Release.Name }}-service
+  # annotations:
+    # external-dns.alpha.kubernetes.io/hostname: {{ .Release.Name }}.nonprod.pod7.tf
+spec:
+  # type: LoadBalancer
+  selector:
+    app: {{ .Release.Name }}
+  ports:
+    - port: 5678 # Default port for image	
+# ---
+
+# kind: Pod
+# apiVersion: v1
+# metadata:
+#   name: {{ .Release.Name }}-app
+#   labels:
+#     app: {{ .Release.Name }}
+# spec:
+#   containers:
+#     - name: {{ .Release.Name }}-app
+#       image: hashicorp/http-echo
+#       args:
+#         - "-text={{ .Release.Name }}"
