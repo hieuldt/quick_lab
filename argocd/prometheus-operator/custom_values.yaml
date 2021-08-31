@@ -1,2 +1,0 @@
-global.storageClass: gp2
-prometheus.ingress.enabled: true

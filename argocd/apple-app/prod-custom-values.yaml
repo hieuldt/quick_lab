@@ -1,0 +1,3 @@
+dnsDomain: prod.pod7.huyy
+secretName: ""
+replicasCount: 5
