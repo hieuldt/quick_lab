@@ -14,14 +14,18 @@ kibana:
           - opendistro.nonprod.pod7.huyy
 elasticsearch:
   master:
+    replicas: 2
     persistence:
       storageClass: "gp2"
       accessModes:
         - ReadWriteOnce
       size: 8Gi
   data:
+    replicas: 3
     persistence:
       storageClass: "gp2"
       accessModes:
         - ReadWriteOnce
       size: 8Gi
+  client:
+    replicas: 2

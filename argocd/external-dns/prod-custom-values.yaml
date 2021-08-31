@@ -1,0 +1,5 @@
+provider: aws
+aws.zoneType: public
+txtOwnerId: Z023503217NVPT5W9OHCI
+domainFilters[0]: prod.pod7.huyy
+aws.assumeRoleArn: arn:aws:iam::xxxxxxxx:role/irsa-uh7xu2kc1zi0

@@ -2,4 +2,4 @@ persistence.enabled: true
 persistence.storageClassName: gp2
 ingress.enabled: true
 ingress.tls:
-ingress.hosts: 
+ingress.hosts: grafana.prod.pod7.huyy

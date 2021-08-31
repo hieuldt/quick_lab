@@ -1,0 +1,4 @@
+global.storageClass: gp2
+prometheus.ingress.enabled: true
+exporters.node-exporter.enabled: true
+exporters.kube-state-metrics.enabled: true
