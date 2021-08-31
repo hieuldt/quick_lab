@@ -3,7 +3,7 @@ entries:
   http-echo:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2021-08-30T19:18:02.658494+07:00"
+    created: "2021-08-31T15:19:14.226267+07:00"
     description: A Helm chart for Kubernetes
     digest: d730771aece9651d1b6fcc63d472c02ad25799ba0f5eb474f382ed15dcbb6c76
     name: http-echo
@@ -11,15 +11,39 @@ entries:
     urls:
     - http-echo-0.1.0.tgz
     version: 0.1.0
-  react-app:
-  - apiVersion: v2
-    appVersion: 1.16.0
-    created: "2021-08-30T19:18:02.66017+07:00"
-    description: A Helm chart for Kubernetes
-    digest: 174fcd58911c19d7a7006f3bc8025c3e1c73a2e3156c989b36cf052d79445f49
-    name: react-app
-    type: application
+  opendistro-es:
+  - apiVersion: v1
+    appVersion: 1.13.2
+    created: "2021-08-31T15:19:14.228227+07:00"
+    description: Open Distro for Elasticsearch
+    digest: 2e3dc6b7f264971f2bc3576cd189fdb77e859defe9784a239b66aaf99a003e4b
+    kubeVersion: ^1.10.0-0
+    maintainers:
+    - email: derek.heldt-werle@viasat.com
+      name: Derek Heldt-Werle
+    - email: kalvin.chau@viasat.com
+      name: Kalvin Chau
+    name: opendistro-es
+    sources:
+    - https://pages.git.viasat.com/ATG/charts
     urls:
-    - react-app-0.1.0.tgz
-    version: 0.1.0
-generated: "2021-08-30T19:18:02.657138+07:00"
+    - opendistro-es-1.13.2.tgz
+    version: 1.13.2
+  - apiVersion: v1
+    appVersion: 1.13.2
+    created: "2021-08-31T15:19:14.231767+07:00"
+    description: Open Distro for Elasticsearch
+    digest: 54aea51f2ee9ecd209a6b5e3b2e83ec6bf77e0bd6500d72e2f75dfafecc75007
+    kubeVersion: ^1.10.0-0
+    maintainers:
+    - email: derek.heldt-werle@viasat.com
+      name: Derek Heldt-Werle
+    - email: kalvin.chau@viasat.com
+      name: Kalvin Chau
+    name: opendistro-es
+    sources:
+    - https://pages.git.viasat.com/ATG/charts
+    urls:
+    - opendistro-es/opendistro-es-1.13.2.tgz
+    version: 1.13.2
+generated: "2021-08-31T15:19:14.223595+07:00"
