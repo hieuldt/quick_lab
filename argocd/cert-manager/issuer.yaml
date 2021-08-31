@@ -16,4 +16,4 @@ spec:
         route53:
           region: us-east-1
           hostedZoneID: Z00009601SS4DK9P71YCZ # optional, see policy above
-          role: arn:aws:iam::512134834387:role/irsa-f2tn5b21orc5
+          role: arn:aws:iam::xxxxxxx:role/irsa-f2tn5b21orc5
