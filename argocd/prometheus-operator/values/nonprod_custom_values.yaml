@@ -30,7 +30,7 @@ prometheus:
       tls:
       - hosts:
           - thanos.nonprod.pod7.huyy
-        secretName: thanos.prometheus.local-tls
+        secretName: letsencrypt-staging
 alertmanager:
   ingress:
     enabled: true

@@ -8,7 +8,7 @@ ingress:
   hosts:
     - grafana.prod.pod7.huyy
   tls:
-    - secretName: chart-example-tls
+    - secretName: letsencrypt-staging
       hosts:
         - grafana.prod.pod7.huyy
 persistence:
@@ -18,3 +18,5 @@ persistence:
   accessModes:
     - ReadWriteOnce
   size: 10Gi
+adminUser: admin
+adminPassword: strongpassword

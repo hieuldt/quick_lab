@@ -1,5 +1,10 @@
 provider: aws
-aws.zoneType: public
-txtOwnerId: Z023503217NVPT5W9OHCI
-domainFilters[0]: nonprod.pod7.huyy
-aws.assumeRoleArn: arn:aws:iam::xxxxxxxx:role/irsa-uh7xu2kc1zi0
+aws:
+  region: us-east-1
+  zoneType: public
+domainFilters: [nonprod.pod7.huyy]
+zoneNameFilters: [nonprod.pod7.huyy]
+serviceAccount:
+  create: true
+  annotations: 
+    eks.amazonaws.com/role-arn: arn:aws:iam::xxxxxxxx:role/irsa-uh7xu2kc1zi
