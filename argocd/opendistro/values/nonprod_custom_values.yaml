@@ -9,7 +9,7 @@ kibana:
     hosts:
       - opendistro.nonprod.pod7.huyy
     tls: 
-     - secretName: chart-example-tls
+     - secretName: letsencrypt-staging
        hosts:
           - opendistro.nonprod.pod7.huyy
 elasticsearch:
