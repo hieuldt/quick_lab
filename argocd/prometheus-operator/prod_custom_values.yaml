@@ -1,4 +1,50 @@
-global.storageClass: gp2
-prometheus.ingress.enabled: true
-exporters.node-exporter.enabled: true
-exporters.kube-state-metrics.enabled: true
+global:
+  storageClass: "gp2"
+prometheus:
+  ingress:
+    enabled: true
+    certManager: false
+    hostname: prometheus.prod.pod7.huyy
+    path: /
+    annotations:
+     kubernetes.io/ingress.class: nginx
+  retention: 10d
+  storageSpec: {}
+  persistence:
+    enabled: true
+    storageClass: "gp2"
+    accessModes:
+      - ReadWriteOnce
+    size: 8Gi
+  thanos:
+    create: true
+    ingress:
+      enabled: true
+      certManager: false
+      annotations:
+         kubernetes.io/ingress.class: nginx
+         nginx.ingress.kubernetes.io/backend-protocol: "GRPCS"
+      hosts:
+        - name: thanos.prod.pod7.huyy
+          path: /
+      tls:
+      - hosts:
+          - thanos.prod.pod7.huyy
+        secretName: thanos.prometheus.local-tls
+alertmanager:
+  ingress:
+    enabled: true
+    certManager: false
+    hostname: alertmanager.prod.pod7.huyy
+    path: /
+    annotations:
+       kubernetes.io/ingress.class: nginx
+    tls: false
+  retention: 120h
+  storageSpec: {}
+  persistence:
+    enabled: true
+    storageClass: "gp2"
+    accessModes:
+      - ReadWriteOnce
+    size: 8Gi
