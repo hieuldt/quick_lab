@@ -1,0 +1,19 @@
+apiVersion: cert-manager.io/v1
+kind: Issuer
+metadata:
+  name: letsencrypt-staging
+spec:
+  acme:
+    server: https://acme-staging-v02.api.letsencrypt.org/directory
+    email: user@example.com
+    privateKeySecretRef:
+      name: letsencrypt-staging
+    solvers:
+    - selector:
+        dnsZones:
+          - "nonprod.pod7.huyy"
+      dns01:
+        route53:
+          region: us-east-1
+          hostedZoneID: Z00009601SS4DK9P71YCZ # optional, see policy above
+          role: arn:aws:iam::512134834387:role/irsa-f2tn5b21orc5
