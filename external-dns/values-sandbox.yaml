@@ -1,9 +1,8 @@
 external-dns:
   serviceAccount:
-    create: false
-    name: "external-dns"
+    create: true
   rbac:
-    create: false
+    create: true
   provider: aws
   policy: sync
   domainFilters:
