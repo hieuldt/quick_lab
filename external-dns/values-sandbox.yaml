@@ -5,7 +5,6 @@ rbac:
   create: false
 provider: aws
 policy: sync
-sources: "{ingress,service}"
 domainFilters: "{${join(",", "arbmtest.local")}}"
 txtOwnerId: "arbmtest.local"
 aws.zoneType: private
