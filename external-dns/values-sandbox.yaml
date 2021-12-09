@@ -6,6 +6,7 @@ external-dns:
     create: false
   provider: aws
   policy: sync
-  domainFilters: "arbmtest.local"
+  domainFilters: 
+    - arbmtest.local
   txtOwnerId: "arbmtest.local"
   aws.zoneType: private
