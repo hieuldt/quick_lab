@@ -8,11 +8,11 @@ metadata:
 spec:
   destination:
     namespace: external-dns
-    server: https://kubernetes.default.svc
+    server: 'https://kubernetes.default.svc'
   project: infrastructure
   source:
     path: external-dns
-    repoURL: https://github.com/hieuldt/quick_lab
+    repoURL: 'https://github.com/hieuldt/quick_lab'
     targetRevision: HEAD
     helm:
       releaseName: external-dns
