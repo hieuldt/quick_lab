@@ -17,7 +17,7 @@ spec:
     helm:
       releaseName: ingress-nginx
       valueFiles:
-        - values-{{ $.Values.env }}.yaml
+        - values-sandbox.yaml
   syncPolicy:
     automated:
       prune: true
