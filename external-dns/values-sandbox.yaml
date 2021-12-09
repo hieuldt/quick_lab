@@ -5,6 +5,6 @@ rbac:
   create: false
 provider: aws
 policy: sync
-domainFilters: "{${join(",", "arbmtest.local")}}"
+domainFilters: "arbmtest.local"
 txtOwnerId: "arbmtest.local"
 aws.zoneType: private
