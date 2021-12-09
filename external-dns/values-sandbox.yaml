@@ -1,11 +1,6 @@
 external-dns:
-  serviceAccount:
-    create: true
-  rbac:
-    create: true
   provider: aws
   policy: sync
   domainFilters:
     - arbmtest.local
-  txtOwnerId: 'arbmtest.local'
   aws.zoneType: private
