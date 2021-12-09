@@ -1,0 +1,13 @@
+serviceAccount:
+  create: false
+  name: kubernetes_service_account.external_dns.metadata.0.name
+rbac:
+  create: false
+provider: aws
+policy: sync
+sources:
+  - service
+  - ingress
+domainFilters: "{${join(",", "arbmtest.local")}}"
+txtOwnerId: "arbmtest.local"
+aws.zoneType: private
