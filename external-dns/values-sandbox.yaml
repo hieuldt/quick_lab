@@ -1,7 +1,6 @@
 external-dns:
   serviceAccount:
     create: false
-    name: external-dns
   rbac:
     create: false
   provider: aws
