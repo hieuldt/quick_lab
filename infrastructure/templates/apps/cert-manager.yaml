@@ -12,7 +12,7 @@ spec:
   project: infrastructure
   source:
     path: cert-manager
-    repoURL: https://github.com/alrajhi-my/k8s-apps-platform
+    repoURL: https://github.com/hieuldt/quick_lab
     targetRevision: HEAD
     helm:
       releaseName: cert-manager
