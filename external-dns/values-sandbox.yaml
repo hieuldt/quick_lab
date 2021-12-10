@@ -3,7 +3,7 @@ external-dns:
     create: true
     name: external-dns
   rbac:
-    create: false
+    create: true
     serviceAccountName: external-dns
   provider: aws
   policy: sync
