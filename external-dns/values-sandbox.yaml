@@ -2,9 +2,11 @@ external-dns:
   serviceAccount:
     create: true
     name: external-dns
+    annotations: {
+      "eks.amazonaws.com/role-arn" = arn:aws:iam::643006215472:role/system-external-dns-role
+    }
   rbac:
     create: true
-    serviceAccountName: external-dns
   provider: aws
   policy: sync
   domainFilters:
