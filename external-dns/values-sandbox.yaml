@@ -3,12 +3,12 @@ external-dns:
     create: true
     name: external-dns
     annotations:
-      eks.amazonaws.com/role-arn: arn:aws:iam::643006215472:role/system-external-dns-role
+      eks.amazonaws.com/role-arn: arn:aws:iam::435248902236:role/system-external-dns-role
   rbac:
     create: true
   provider: aws
   policy: sync
   domainFilters:
     - arbmtest.local
-  txtOwnerId: Z10241153QTKON9SISQF0
+  txtOwnerId: Z1037604BAKWPKRZ4NQO
   aws.zoneType: private
