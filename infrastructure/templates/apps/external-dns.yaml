@@ -12,7 +12,7 @@ spec:
   project: infrastructure
   source:
     path: external-dns
-    repoURL: https://github.com/alrajhi-my/k8s-apps-platform
+    repoURL: https://github.com/hieuldt/quick_lab
     targetRevision: HEAD
     helm:
       releaseName: external-dns-public
@@ -37,7 +37,7 @@ spec:
   project: infrastructure
   source:
     path: external-dns
-    repoURL: https://github.com/alrajhi-my/k8s-apps-platform
+    repoURL: https://github.com/hieuldt/quick_lab
     targetRevision: HEAD
     helm:
       releaseName: external-dns-private
