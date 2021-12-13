@@ -1,4 +1,0 @@
-dnsDomain: example.com
-secretName: example-tls
-replicasCount: 2
-Issues: "letsencrypt-staging"
