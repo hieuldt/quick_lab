@@ -47,3 +47,28 @@ spec:
     automated:
       prune: true
       selfHeal: true
+---
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: external-dns-both
+  namespace: argo
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+spec:
+  destination:
+    namespace: external-dns
+    server: https://kubernetes.default.svc
+  project: infrastructure
+  source:
+    path: external-dns
+    repoURL: https://github.com/hieuldt/quick_lab
+    targetRevision: HEAD
+    helm:
+      releaseName: external-dns-both
+      valueFiles:
+        - values-{{ $.Values.env }}-both.yaml
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
