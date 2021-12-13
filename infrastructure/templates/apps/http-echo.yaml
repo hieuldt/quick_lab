@@ -8,10 +8,11 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: 'https://raw.githubusercontent.com/hieuldt/quick_lab/main/charts'
+    repoURL: https://github.com/hieuldt/quick_lab
     path: http-echo
     targetRevision: HEAD
     helm:
+      releaseName: public-endpoint
       valueFiles:
         - values-public.yaml
   destination:
@@ -32,10 +33,11 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: 'https://raw.githubusercontent.com/hieuldt/quick_lab/main/charts'
+    repoURL: https://github.com/hieuldt/quick_lab
     path: http-echo
     targetRevision: HEAD
     helm:
+      releaseName: private-endpoint
       valueFiles:
         - values-private.yaml
   destination:
