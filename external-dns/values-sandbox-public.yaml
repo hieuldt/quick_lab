@@ -1,0 +1,25 @@
+external-dns:
+  serviceAccount:
+    annotations:
+      eks.amazonaws.com/role-arn: arn:aws:iam::550374772193:role/system-external-dns-role
+  policy: sync
+  txtOwnerId: Z03102701A9ZKLHD8FQNZ
+
+  domainFilters:
+    - hieuldt.com
+  aws.zoneType: public
+
+########################
+# serviceAccount:
+#   create: false
+#   name: kubernetes_service_account.external_dns.metadata.0.name
+# rbac:
+#   create: false
+# provider: aws
+# policy: sync
+# sources:
+#   - service
+#   - ingress
+# domainFilters: "{${join(",", "arbmtest.local")}}"
+# txtOwnerId: "arbmtest.local"
+# aws.zoneType: private

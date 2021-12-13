@@ -1,0 +1,10 @@
+external-dns:
+  serviceAccount:
+    annotations:
+      eks.amazonaws.com/role-arn: arn:aws:iam::550374772193:role/system-external-dns-role
+  policy: sync
+  txtOwnerId: Z043409331F8MWM2ZD538
+
+  domainFilters:
+    - arbmtest.local
+  aws.zoneType: private
